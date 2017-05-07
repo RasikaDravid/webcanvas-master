@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Htmlcanvas</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+<meta name="htmlcanvas/config/environment" content="%7B%22modulePrefix%22%3A%22htmlcanvas%22%2C%22environment%22%3A%22production%22%2C%22rootURL%22%3A%22/%22%2C%22locationType%22%3A%22auto%22%2C%22EmberENV%22%3A%7B%22FEATURES%22%3A%7B%7D%2C%22EXTEND_PROTOTYPES%22%3A%7B%22Date%22%3Afalse%7D%7D%2C%22APP%22%3A%7B%22name%22%3A%22htmlcanvas%22%2C%22version%22%3A%220.0.0+%22%7D%2C%22exportApplicationGlobal%22%3Afalse%2C%22ember-websockets%22%3A%7B%22socketIO%22%3Afalse%7D%7D" />
+
+    <link rel="stylesheet" href="/assets/vendor-d41d8cd98f00b204e9800998ecf8427e.css" integrity="sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU= sha512-z4PhNX7vuL3xVChQ1m2AB9Yg5AULVxXcg/SpIdNs6c5H0NE8XYXysP+DGNKHfuwvY7kxvUdBeoGlODJ6+SfaPg==" >
+    <link rel="stylesheet" href="/assets/htmlcanvas-dfdbe144f4482d4353d2ef2d0b3752c3.css" integrity="sha256-KLRt5cnQQgM2XOenPcHnBKXCYpgO4LInFAojs71Fd4g= sha512-XpXgLImtClpqg79eX63G1EgouZSq1uyBfmzwwPQHVrlq3ELLxGbqhnUjA/yZeDOA2UrNbQ8ZbDbbA5v1pfuEVg==" >
+
+    
+  </head>
+  <body onload="init()">
+    
+
+    <canvas id="drawing"></canvas>
+
+
+    <div style="position:absolute;top:12%;left:43%;">Choose Color</div>
+    <div style="position:absolute;top:15%;left:45%;width:10px;height:10px;background:green;" id="green" onclick="color(this)"></div>
+    <div style="position:absolute;top:15%;left:46%;width:10px;height:10px;background:blue;" id="blue" onclick="color(this)"></div>
+    <div style="position:absolute;top:15%;left:47%;width:10px;height:10px;background:red;" id="red" onclick="color(this)"></div>
+    <div style="position:absolute;top:17%;left:45%;width:10px;height:10px;background:yellow;" id="yellow" onclick="color(this)"></div>
+    <div style="position:absolute;top:17%;left:46%;width:10px;height:10px;background:orange;" id="orange" onclick="color(this)"></div>
+    <div style="position:absolute;top:17%;left:47%;width:10px;height:10px;background:black;" id="black" onclick="color(this)"></div>
+    <div style="position:absolute;top:20%;left:43%;">Eraser</div>
+    <div style="position:absolute;top:22%;left:45%;width:15px;height:15px;background:white;border:2px solid;" id="white" onclick="color(this)"></div>
+
+    <input type="button" value="save" id="btn" size="30" onclick="save()" style="position:absolute;top:55%;left:10%;">
+    <input type="button" value="clear" id="clr" size="23" onclick="erase()" style="position:absolute;top:55%;left:15%;">
+
+      <p>Hi I am here..</p>
+    <script src="/assets/vendor-d713a3a5370774e1b3f38aaaf414e311.js" integrity="sha256-G3qPWshTg3D92YmVBw3G7yaqLIJ0s5e46coF3bj64Sc= sha512-S40Ere+cmlNHnTRSGwQZc0pcnYwZrdG14qaYEqlLGmHIa4h6H7E90gBvDp5P9NPeqP0mEj7TneOUEOg5qjD7hw==" ></script>
+    <script src="/assets/htmlcanvas-ce565acf6ca808899817523e49ca823b.js" integrity="sha256-1SnzPxrAYyR977bLjNFCsgAyWED4fk4gUGhcxnCH1Ag= sha512-i0dJ+aw2p1U4hW2Y+4yWihA1hGzYlxxmYYQfFtya3LZupJICzO/i8eTZCt8+myiyDAtNK38JXcEa9Svl2KCuBQ==" ></script>
+
+    
+
+  </body>
+</html>
+/
+<script src="https://cdn.socket.io/socket.io-1.0.0.js"></script>

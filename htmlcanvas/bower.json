@@ -1,0 +1,6 @@
+{
+  "name": "htmlcanvas",
+  "dependencies": {
+    "socket.io-client": "^1.7.2"
+  }
+}
